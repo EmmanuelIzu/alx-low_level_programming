@@ -1,25 +1,15 @@
 #include <stdio.h>
-#include <conio.h>
 int main(void)
 {
-	clrscr();
-	printf("    short int is %2d bytes \n", sizeof(short int));
-	printf("          int is %2d bytes \n", sizeof(int));
-	printf("        int * is %2d bytes \n", sizeof(int *));
-	printf("     long int is %2d bytes \n", sizeof(long int));
-	printf("   long int * is %2d bytes \n", sizeof(long int *));
-	printf("   signed int is %2d bytes \n", sizeof(signed int));
-	printf(" unsigned int is %2d bytes \n", sizeof(unsigned int));
-	printf("\n");
-	printf("        float is %2d bytes \n", sizeof(float));
-	printf("      float * is %2d bytes \n", sizeof(float *));
-	printf("       double is %2d bytes \n", sizeof(double));
-	printf("     double * is %2d bytes \n", sizeof(double *));
-	printf("  long double is %2d bytes \n", sizeof(long double));
-	printf("\n");
-	printf("  signed char is %2d bytes \n", sizeof(signed char));
-	printf("         char is %2d bytes \n", sizeof(char));
-	printf("       char * is %2d bytes \n", sizeof(char *));
-	printf("unsigned char is %2d bytes \n", sizeof(unsigned char));
-	getch();
+    int integerType;
+    float floatType;
+    double doubleType;
+    char charType;
+
+    printf("Size of int: %ld bytes\n",sizeof(integerType));
+    printf("Size of float: %ld bytes\n",sizeof(floatType));
+    printf("Size of double: %ld bytes\n",sizeof(doubleType));
+    printf("Size of char: %ld byte\n",sizeof(charType));
+
+    return 0;
 }
