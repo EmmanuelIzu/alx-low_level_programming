@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-main()
+int main(void)
 {
 	clrscr();
 	printf("    short int is %2d bytes \n", sizeof(short int));
