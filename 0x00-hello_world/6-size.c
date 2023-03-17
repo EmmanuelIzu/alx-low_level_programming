@@ -1,15 +1,17 @@
 #include <stdio.h>
 int main(void)
 {
-    int integerType;
-    float floatType;
-    double doubleType;
-    char charType;
+int integerType;
+float floatType;
+double doubleType;
+char charType;
 
-    printf("Size of int: %ld bytes\n",sizeof(integerType));
-    printf("Size of float: %ld bytes\n",sizeof(floatType));
-    printf("Size of double: %ld bytes\n",sizeof(doubleType));
-    printf("Size of char: %ld byte\n",sizeof(charType));
-
-    return 0;
+printf("Size of Int Data Types in C = %2d bytes \n", sizeof(short int));
+printf("Size of Long Int Data Types in C = %2d bytes \n", sizeof(long int));
+printf("Size of Float Data Types in C = %2d bytes \n", sizeof(float));
+printf("Size of Double Data Types in C = %2d bytes \n", sizeof(double));
+printf("Size of Long Double Data Types in C = %2d bytes \n",
+sizeof(long double));
+printf("Size of Char Data Types in C = %2d bytes \n", sizeof(char));
+return (0);
 }
