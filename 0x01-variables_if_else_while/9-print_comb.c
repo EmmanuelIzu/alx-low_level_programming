@@ -3,7 +3,7 @@
 int main(void)
 /*prints the alphabets A to Z in lowercase*/
 {
-	char c;
+	int c;
 
 	c = 0;
 
