@@ -5,8 +5,10 @@ int main(void)
 /*prints the alphabets A to Z in lowercase and uppercase*/
 {
 	char c;
+	char d;
 
 	c = 'a';
+	d = 'A';
 
 	while (c <= 'z')
 	{
@@ -14,11 +16,12 @@ int main(void)
 	++c;
 	}
 
-	while (c <= 'z')
+	while (d <= 'Z')
 	{
-	putchar(toupper(c));
+	putchar(d);
 	++c;
 	}
+
 	putchar('\n');
 
 return (0);
