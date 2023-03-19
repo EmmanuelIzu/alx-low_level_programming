@@ -12,24 +12,22 @@ int main(void)
 
 	while (a <= 9)
 	{
-		c++;
-		b = c;
-		while (b <= 9)
-		{
-			putchar('0' + a);
-			putchar('0' + b);
-			if (a == 8 && b == 9){
+	c++;
+	b = c;
+	while (b <= 9)
+	{
+	putchar('0' + a);
+	putchar('0' + b);
+	if (a == 8 && b == 9)
+	{
 
-                        }else
-                        {
-                        putchar(',');
-                        putchar(' ');
-
-                }
-
-
-			b++;
-					}
+	}
+	else
+	{
+	putchar(',');
+	putchar(' ');
+	}
+	b++;				}
 	b = 0;
 	a++;
 	}
