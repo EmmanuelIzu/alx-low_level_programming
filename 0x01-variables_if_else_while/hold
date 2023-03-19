@@ -8,30 +8,36 @@ int main(void)
 {
 	int a = 0;
 	int b = 0;
-	int c = 0;
+	int c = 1;
+	int d = 1;
+	int e = 0;
+	int f = 0;
 
 	while (a <= 9)
 	{
+		e++;
+		e=d;
+		while (d <= 9){
 		c++;
 		b = c;
 		while (b <= 9)
 		{
 			putchar('0' + a);
+			putchar('0' + d);
 			putchar('0' + b);
-			if (a == 8 && b == 9){
-
-                        }else
-                        {
-                        putchar(',');
-                        putchar(' ');
-
-                }
-
-
+			putchar(',');
+			putchar(' ');
 			b++;
 					}
-	b = 0;
+		++d;
+		b = 0;
+		/*printf("y");*/
+		}
+
+	d = 0;
+	c = 1;
 	a++;
+	/*printf("x");*/
 	}
 	putchar('\n');
 return (0);
