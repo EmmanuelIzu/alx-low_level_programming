@@ -1,25 +1,24 @@
 #include<stdio.h>
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
-/*prints the alphabets A to Z in lowercase*/
 {
 	int c;
 
 	c = 0;
-
 	while (c <= 9)
 	{
+	putchar('0' + c);
 	if (c != 9)
 	{
-	putchar('0'+c);
 	putchar(',');
 	putchar(' ');
-	}else
-	{
-	putchar('0'+c);
 	}
 	++c;
 	}
-
+	putchar('\n');
 return (0);
 }
