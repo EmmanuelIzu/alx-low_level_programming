@@ -1,7 +1,10 @@
 #include<stdio.h>
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
-/*prints the alphabets A to Z in lowercase*/
 {
 	int c;
 

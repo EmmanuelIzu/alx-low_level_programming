@@ -1,8 +1,11 @@
 #include<stdio.h>
 #include<ctype.h>
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
 
 int main(void)
-/*prints the alphabets A to Z in lowercase and uppercase*/
 {
 	char c;
 	char d;
