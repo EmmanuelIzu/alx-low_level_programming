@@ -3,19 +3,23 @@
 int main(void)
 /*prints the alphabets A to Z in lowercase*/
 {
-	int c;
+	char c;
 
-	c = 0;
+	c = '0';
 
-	while (c < 10)
+	while (c <= '9')
 	{
-	if (c != 9)
+	if (c != '9')
 	{
-	putchar('0'+c);
-	putchar('", "');	
+	putchar(c);
+	putchar(',');
+	putchar(' ');
+	}else
+	{
+	putchar(c);
 	}
 	++c;
 	}
 
-return (0);
+return ('\n');
 }
