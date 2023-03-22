@@ -10,5 +10,5 @@
 int _isalpha(int c)
 {
 
-	return (isalpha(c));
+	return (!(isalpha(c)));
 }
