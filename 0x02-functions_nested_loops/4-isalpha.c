@@ -9,6 +9,14 @@
 
 int _isalpha(int c)
 {
+	int checkalpha = isalpha(c);
 
-	return (!(isalpha(c)));
+	if (checkalpha == 0)
+	{
+	return (0);
+	}
+	else
+	{
+	return (1);
+	}
 }
