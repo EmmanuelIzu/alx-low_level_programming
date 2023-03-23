@@ -9,9 +9,10 @@
 
 int _isupper(int c)
 {
+
 	int check_upper = isupper(c);
 
-	if (check_upper == 1)
+	if (check_upper > 0)
 	{
 	return (1);
 	}
