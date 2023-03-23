@@ -16,29 +16,13 @@ void more_numbers(void)
 	{
 		for (j = 0; j <= 14; ++j)
 		{
-		my_putchar(j);
+		if (j > 9){
+		_putchar((j / 10) + '0');
+		}
+		_putchar((j % 10) + '0');
 		}
 	_putchar('\n');
 
 	}
-}
-
-/**
-* my_putchar - function that prints long int
-* @var: hold the input value passed
-*/
-
-void my_putchar(long var)
-{
-	if (var < 0)
-	{
-	_putchar('-');
-	var = var * -1;
-	}
-
-	if (var / 10)
-	my_putchar(var / 10);
-	_putchar(var % 10 + '0');
 
 }
-
