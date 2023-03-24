@@ -1,24 +1,33 @@
 #include "main.h"
 /**
- * print_number - function that prints long int
- * @n: accepts the input variable
+ * print_number - function that prints intergers
+ * @n: holding variable
  */
+
+
 void print_number(int n)
 {
+int m = n;
 
 	if (n < 0)
 	{
+	n *= -1;
+	m = n;
 	_putchar('-');
-	n = n * -1;
+
 	}
 
-	if (n == 0)
-	{
-	_putchar(0);
-	}
+	m /= 10;
+	if (m != 0)
+	print_number(m);
+	_putchar((unsigned int) n % 10 + '0');
 
-	if (n / 10)
-	print_number(n / 10);
-	_putchar((n % 10) + '0');
+
+
+
+
+
+
+
 
 }
