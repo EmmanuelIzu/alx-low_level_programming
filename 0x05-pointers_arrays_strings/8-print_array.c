@@ -12,7 +12,7 @@ void print_array(int *a, int n)
 	neg1 = n - 1;
 
 	if (n <= 0){
-	
+	printf(" ");
 	}
 	else
 	{
