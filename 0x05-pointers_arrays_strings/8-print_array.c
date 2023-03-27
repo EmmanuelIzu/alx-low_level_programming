@@ -11,6 +11,11 @@ void print_array(int *a, int n)
 
 	neg1 = n - 1;
 
+	if (n <= 0){
+	
+	}
+	else
+	{
 	for (i = 0; i < n; ++i)
 	{
 
@@ -27,5 +32,7 @@ void print_array(int *a, int n)
 	}
 
 	}
+
+}
 
 }
