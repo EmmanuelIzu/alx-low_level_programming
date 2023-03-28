@@ -1,3 +1,6 @@
+#include<ctype.h>
+#include<string.h>
+
 /**
  * _atoi - the function
  * @s: the pointer variable
@@ -6,34 +9,18 @@
 
 int _atoi(char *s)
 {
+	
+        int i;
+        int length = strlen(s);
+	char ct[20];
 
-	int a = 0;
+        for (i = 0; i < length; i++){
+        if (isdigit(s[i]))
+        {
+                strcat(ct, &s[i], 1);
+        }
+        }
+	_printf("%s",ct);
 
-	unsined int un = 0;
-
-	int minimun = 1;
-
-	int isa = 0;
-
-	while (s(a))
-	{
-	if ((s(a)) == 45)
-	{
-	minimum *= -1;
-	}
-	while ((s(a)) >= 48 && s(a) <= 57)
-	{
-	isa = 1;
-	un - (un * 10) + (s(a) - '0');
-	a++;
-	}
-	if (isa == 1)
-	{
-	break;
-	}
-	c++;
-	}
-	un *= min;
-	return (ni);
 }
 
