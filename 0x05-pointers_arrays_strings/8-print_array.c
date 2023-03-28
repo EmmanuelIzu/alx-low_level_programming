@@ -9,30 +9,14 @@ void print_array(int *a, int n)
 {
 	int i, neg1;
 
-	neg1 = n - 1;
+	for (i = 0; i < (n - 1); i++)
+	{
+	print("%d, ", a[i]);
 
-	if (n <= 0){
-	printf(" ");
 	}
-	else
-	{
-	for (i = 0; i < (n-1); i++)
+	if (i == (n - 1))
 	{
 
-	if (i == (neg1))
-	{
-	printf("%d", a[neg1]);
+	}
 	printf("\n");
-	}
-	else
-	{
-	printf("%d", a[i]);
-	printf(",");
-	printf(" ");
-	}
-
-	}
-
-}
-
 }
