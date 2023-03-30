@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+void reverse_array(int *a, int n){
+	int hold[13];
+	int i = 0;
+	int j = n;
+
+	while ((i < n) && (j > 0))
+	{
+
+	 printf("%d\n", hold[j]);
+        printf("%d\n", a[i]);
+
+	++i;
+	--j;
+}
+
+}
