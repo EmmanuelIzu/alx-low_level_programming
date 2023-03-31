@@ -8,12 +8,12 @@
  */
 int main(void)
 {
-char str[] = "Expect the best. Prepare for the worst. Capitalize on what;
+char str[] = "Expect the best. Prepare for the worst. Capitalize on what";
 
 	char *ptr;
 
 	ptr = cap_string(str);
-	printf(" % s", ptr);
-	printf(" % s", str);
+	printf("%s", ptr);
+	printf("%s", str);
 	return (0);
 }
