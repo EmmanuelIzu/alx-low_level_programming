@@ -24,20 +24,10 @@ char lowerside[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 		{
 			if (n[i] == upperside[j])
 		{
-			printf("%c", n[i]);
-			printf("%d", j);
-			printf("%c", lowerside[j]);
 			n[i] = lowerside[j];
-			printf("%c ", n[i]);
-
-			 /*printf("%c ", n[j]);*/
+			break;
 
 		}
-			/*
-			*printf("%c", upperside[i]);
-			*printf("%c", lowerside[i]);
-			*/
-			/*printf("%c ", n[j]);*/
 
 		}
 
