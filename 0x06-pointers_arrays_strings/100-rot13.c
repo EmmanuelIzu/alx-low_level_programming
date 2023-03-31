@@ -8,10 +8,9 @@ char upperside[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char lowerside[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	int i,j;
-	int nlength = strlen(n);
 	int uppersidelength = strlen(upperside);
 
-	for (i = 0; i < nlength; i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
 
 		for (j = 0; j < uppersidelength; j++)
