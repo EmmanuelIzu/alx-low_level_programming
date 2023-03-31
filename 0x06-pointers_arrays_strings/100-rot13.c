@@ -1,13 +1,20 @@
 #include <string.h>
 #include <stdio.h>
 
+/**
+ * rot13 - function
+ * @n: variable
+ * Return: return pointer
+ *
+ */
+
 
 char *rot13(char *n)
 {
 char upperside[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char lowerside[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	int i,j;
+	int i, j;
 	int uppersidelength = strlen(upperside);
 
 	for (i = 0; n[i] != '\0'; i++)
@@ -27,13 +34,13 @@ char lowerside[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 		}
 			/*
-			printf("%c", upperside[i]);
-			printf("%c", lowerside[i]);
+			*printf("%c", upperside[i]);
+			*printf("%c", lowerside[i]);
 			*/
 			/*printf("%c ", n[j]);*/
-			
+
 		}
-		
+
 	}
 return (n);
 }
