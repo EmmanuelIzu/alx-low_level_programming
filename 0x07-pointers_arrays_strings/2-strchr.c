@@ -8,7 +8,7 @@
 
 char *_strchr(char *s, char c)
 {
-	strchr(s, c);
+	char *occurs = strchr(s, c);
 
-return (s);
+return (occurs);
 }
