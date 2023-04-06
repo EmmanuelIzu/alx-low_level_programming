@@ -1,37 +1,30 @@
+#include "main.h"
 
-int checkprime(int n, int m, int j);
-
-int is_prime_number(int n)
+/**
+ * prime - Main program
+ * @m: variable
+ * @n: variable
+ *
+ * Return: prime number
+ */
+int prime(int m, int n)
 {
-	int check = (checkprime(n, 2, 0));
-	int hold;
-
-	if (check > 0)
-	{
-	hold = 0;
-	}
-
-	else if (check == 0)
-	{
-	hold = 1;
-	}
-	return (hold);
+	if (n == 1)
+		return (1);
+	if (m % n == 0 && n > 0)
+		return (0);
+	return (prime(m, n - 1));
 }
 
-
-int checkprime(int n, int m, int j)
+/**
+ * is_prime_number - Prime Function Block
+ * @i: variable
+ * Return: return prime
+ */
+int is_prime_number(int i)
 {
-	int check = n % m;
-	
-	if(check == 0)
-	{
-	j = j + 1;
+	if (i <= 1)
+		return (0);
+	return (prime(i, i - 1));
 }
 
-	if (m == n){
-	return (j);
-	}
-
-	return (checkprime(n, (m + 1), j));
-
-}
