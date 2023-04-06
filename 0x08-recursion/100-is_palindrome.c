@@ -15,19 +15,18 @@ int is_palindrome(char *s)
 	return (if_pal(s, 0, _strlen(s)));
 }
 
-
 /**
  * if_pal - palindrome
  * @s: variable
- * @i: variable
- * @len: variable
+ * @m: variable
+ * @length: variable
  * Return: return 1
  */
 int if_pal(char *s, int m, int length)
 {
 	if (length <= m)
 		return (1);
-	
+
 	if (*(s + m) != *(s + length - 1))
 		return (0);
 
@@ -37,13 +36,13 @@ int if_pal(char *s, int m, int length)
 
 /**
  * _strlen - string length
- * @s: variable
+ * @str: variable
  * Return: return length
  */
 int _strlen(char *str)
 {
-        if (*str == '\0')
-                return (0);
-        return (1 + _strlen(str + 1));
+	if (*str == '\0')
+		return (0);
+	return (1 + _strlen(str + 1));
 }
 
