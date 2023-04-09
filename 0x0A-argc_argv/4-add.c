@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
 	else if (argc <= 1)
 	{
 		printf("%d\n", 0);
+		return (0);
 
 	}
 	else
@@ -55,6 +56,7 @@ int main(int argc, char *argv[])
 		add = add + atoi(argv[count]);
 		}
 	printf("%d\n", add);
+	return (0);
 	}
 return (0);
 
