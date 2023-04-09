@@ -58,6 +58,5 @@ int main(int argc, char *argv[])
 	printf("%d\n", add);
 	return (0);
 	}
-return (0);
 
 }
