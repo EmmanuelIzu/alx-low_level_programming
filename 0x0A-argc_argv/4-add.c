@@ -11,18 +11,18 @@
 
 int checknonint (int length, char *arr[])
 {
-	int count, check = 0;
+	int count;
 
 	for (count = 1; count < length; ++count)
 	{
 	/*printf("%d\n",atoi(arr[count]));*/
 	if (atoi(arr[count]) == 0)
 	{
-	check++;
+	return (1);
 	}
 	}
 
-return (check);
+return (0);
 }
 
 
@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 {
 	int count, add = 0;
 
-	if (checknonint(argc, argv) > 0)
+	if (checknonint(argc, argv) == 1)
 	{
 		printf("Error\n");
 		return (1);
