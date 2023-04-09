@@ -13,19 +13,14 @@ int main(int argc, char *argv[])
 {
 	int count;
 
-	if (argc > 1)
-	{
-	count = atoi(argv[1]) * atoi(argv[2]);
-
-	printf("%d\n", count);
-
-	}
-	else
+	if (argc != 3)
 	{
 	printf("%s\n", "Error");
 
 	return (1);
 	}
 
-return (0);
+	count = atoi(argv[1]) * atoi(argv[2]);
+	printf("%d\n", count);
+	return (0);
 }
