@@ -3,13 +3,35 @@
 #include<ctype.h>
 
 /**
+ * checknonint -  The program Starts here
+ * @length: The number of arguments entered
+ * @arr: an argument array
+ * Return: return as required
+ */
+
+int checknonint (int length, char *arr[])
+{
+	int count, check = 0;
+
+	for (count = 1; count < length; ++count)
+	{
+	if (atoi(arr[count]) == 0)
+	{
+	check++;
+	}
+	}
+
+return (check);
+}
+
+
+/**
  * main -  The program Starts here
  * @argc: The number of arguments entered
  * @argv: an argument array
  * Return: return 0 always
  */
 
-int checknonint (int argc, char *argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -34,28 +56,5 @@ int main(int argc, char *argv[])
 	printf("%d\n", add);
 	}
 return (0);
+
 }
-
-
-/**
- * checknonint -  The program Starts here
- * @argc: The number of arguments entered
- * @argv: an argument array
- * Return: return as required
- */
-
-int checknonint (int argc, char *argv[])
-{
-	int count, check = 0;
-
-	for (count = 1; count < argc; ++count)
-	{
-	if (atoi(argv[count]) == 0)
-	{
-	check++;
-	}
-	}
-
-return (check);
-}
-
