@@ -19,12 +19,13 @@ int main(int argc, char *argv[])
 	count = atoi(argv[1]) * atoi(argv[2]);
 
 	printf("%d\n", count);
-	
-	return (0);
+
 	}
 	else
 	{
-	printf("Error\n");
+	printf("%s\n", "Error");
+
+	return (1);
 	}
 
 return (0);
