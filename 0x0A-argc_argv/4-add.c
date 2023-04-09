@@ -37,15 +37,16 @@ int main(int argc, char *argv[])
 {
 	int count, add = 0;
 
-	if (argc <= 1)
-	{
-		printf("%d\n", 0);
-
-	}
-	else if (checknonint(argc, argv))
+	if (checknonint(argc, argv))
 	{
 		printf("Error\n");
 		return (1);
+	}
+
+	else if (argc <= 1)
+	{
+		printf("%d\n", 0);
+
 	}
 	else
 	{
