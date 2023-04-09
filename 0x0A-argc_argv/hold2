@@ -1,23 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-#include<string.h>
 
 /**
  * checknonint -  The program Starts here
+ * @length: The number of arguments entered
  * @arr: an argument array
  * Return: return as required
  */
 
-int checknonint (char *arr)
+int checknonint (int length, char *arr[])
 {
 	int count;
-	int size = strlen(arr);
 
-	for (count = 0; count < size; ++count)
+	for (count = 1; count < length; ++count)
 	{
 	/*printf("%d\n",atoi(arr[count]));*/
-	if (!isdigit(arr[count]))
+	if (atoi(arr[count]) == 0)
 	{
 	return (1);
 	}
@@ -39,19 +38,16 @@ int main(int argc, char *argv[])
 {
 	int count, add = 0;
 
-	for (count = 1; count < argc; count++)
-	{
-
-	if (checknonint(argv[count]) == 0)
-	{
-	add = add + atoi(argv[count]);
-	}
-	else
+	if (checknonint(argc, argv) == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	}
+
+	for (count = 1; count < argc; count++)
+		{
+		add = add + atoi(argv[count]);
+		}
 	printf("%d\n", add);
 	return (0);
 
