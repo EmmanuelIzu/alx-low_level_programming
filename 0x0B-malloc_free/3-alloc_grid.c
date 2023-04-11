@@ -5,8 +5,6 @@
  * @height: input variable
  * Return: return NULL or arr pointer
  */
-
-
 int **alloc_grid(int width, int height)
 {
 	int **arr, i, j;
@@ -21,21 +19,14 @@ int **alloc_grid(int width, int height)
 		free(arr);
 		return (NULL);
 	}
-
 	for (i = 0; i < height; ++i)
 	{
 	arr[i] = malloc(sizeof(int) * width);
-
 	}
-
 	for (i = 0; i < height; ++i)
 	{
 	if (arr[i] == NULL)
 	{
-		free(arr[i]);
-		free(arr);
-		return (NULL);
-		/**
 		if (arr[i] == NULL)
 		{
 			for (i = width; i >= 0; i--)
@@ -44,17 +35,8 @@ int **alloc_grid(int width, int height)
 			free(arr);
 			return (NULL);
 		}
-		**/
-
 	}
 	}
-	/**
-	if (arr == NULL)
-	{
-		free(arr);
-		return (NULL);
-	}
-	*/
 
 	for (i = 0; i < height; ++i)
 	{
