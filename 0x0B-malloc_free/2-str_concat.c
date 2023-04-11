@@ -13,13 +13,24 @@ char *str_concat(char *s1, char *s2)
 	int length, lengths1, lengths2, i, j;
 
 	char *arr;
+	
+	if (s1 == NULL)
+	{
+	s1 = "";
+	}
+	
+	if (s2 == NULL)
+	{
+	s2 = "";
+	}
 
 	lengths1 = strlen(s1);
 	lengths2 = strlen(s2);
 
 	length = lengths1 + lengths2;
 
-	arr = malloc(sizeof(char) * length + 2);
+	arr = malloc(sizeof(char) * length + 1);
+
 
 	if (arr == NULL)
 	{
