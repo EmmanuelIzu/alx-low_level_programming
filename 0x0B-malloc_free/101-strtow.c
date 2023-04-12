@@ -15,61 +15,60 @@ int count(char *s)
 		if (s[i] == ' ')
 			pos = 0;
 		else if (pos == 0)
-	{
+		{
 			pos = 1;
 			j++;
-	}
-	i++;
+		}
+		i++;
 	}
 	return (j);
 }
 
 /**
- * **strtow - splits a string into words
- * @str: string to split
- *
- * Return: pointer to an array of strings (Success)
- * or NULL (Error)
+ * **strtow - function that splits string
+ * @str: input string
+ * Return: NULL or pointer to array
  */
 char **strtow(char *str)
 {
-	char **matrix, *tmp;
-	int i, k = 0, len = 0, words, c = 0, start, end;
+	int a, b = 0, word, length = 0, c = 0, alpha, beta;
+	char **arr, *tmp;
 
-	while (*(str + len))
-		len++;
-	words = count(str);
-	if (words == 0)
-		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (words + 1));
-	if (matrix == NULL)
-		return (NULL);
-
-	for (i = 0; i <= len; i++)
+	while (*(str + length))
 	{
-		if (str[i] == ' ' || str[i] == '\0')
+		length++;
+	}
+	word = count(str);
+	if (word == 0)
+		return (NULL);
+	arr = (char **) malloc(sizeof(char *) * (word + 1));
+	if (arr == NULL)
+		return (NULL);
+	a = 0;
+	while (a <= length)
+	{
+		if (str[a] == ' ' || str[a] == '\0')
 		{
 			if (c)
 			{
-				end = i;
+				beta = a;
 				tmp = (char *) malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
 					return (NULL);
-				while (start < end)
-					*tmp++ = str[start++];
+				while (alpha < beta)
+					*tmp++ = str[alpha++];
 				*tmp = '\0';
-				matrix[k] = tmp - c;
-				k++;
+				arr[b] = tmp - c;
+				b++;
 				c = 0;
 			}
 		}
 		else if (c++ == 0)
-			start = i;
+			alpha = a;
+		a++;
 	}
-
-	matrix[k] = NULL;
-
-	return (matrix);
+	arr[b] = NULL;
+	return (arr);
 }
 
