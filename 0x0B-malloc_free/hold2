@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char *argstostr(int ac, char **av)
+{
+	int i, j;
+
+	
+	char **arr;
+	arr = malloc(sizeof(char*) * ac);
+	
+
+	for (i = 1; i < ac; ++i)
+	{
+		
+		/*printf("%ld\n", strlen(av[i]));*/
+
+		arr[i] = malloc(sizeof(char) * strlen(av[i]));
+	       /*printf("%s\n ", (av[i]));*/
+		for (j = 0; j < (signed)strlen(av[i]); ++j)
+		{
+		 /*printf("%c\n ", (av[i][j]));*/
+		 arr[i][j] = av[i][j];
+		 /*printf("%s\n ", (arr[i]));*/
+		}	       	
+	}
+
+ for (i = 1; i < ac; ++i)
+        {
+
+                 printf("%s\n", (arr[i]));
+          
+        }
+
+
+
+return (0);
+}
