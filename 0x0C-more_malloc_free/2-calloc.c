@@ -37,7 +37,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	arr = malloc(nmemb * size);
 
-	if (arr == 0)
+	if (arr == NULL)
 		return (NULL);
 
 	setarr(arr, 0, nmemb);
