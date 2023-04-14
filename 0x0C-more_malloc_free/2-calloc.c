@@ -40,7 +40,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (arr == NULL)
 		return (NULL);
 
-	setarr(arr, 0, nmemb);
+	setarr(arr, 0, nmemb * size);
 
 	return (arr);
 
