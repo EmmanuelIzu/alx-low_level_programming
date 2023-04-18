@@ -34,15 +34,18 @@
 */
 	char *_strcpy(char *dest, char *src)
 	{
-		int len, i;
+		int len, i = 0;
 
 
 		len = _strlen(src);
 
-		for (i = 0; i < len; i++)
-		{
+		do {
+
 			dest[i] = src[i];
-		}
+			i++;
+
+		} while (i < len);
+
 		dest[i] = '\0';
 
 
