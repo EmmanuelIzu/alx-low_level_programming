@@ -1,11 +1,5 @@
 #include <stdio.h>
 #include "dog.h"
-/**
- * main - check the code
- * Return: Always
- */
-#include <stdio.h>
-#include "dog.h"
 
 /**
  * main - check the code
