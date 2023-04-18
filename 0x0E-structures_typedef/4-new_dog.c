@@ -38,14 +38,7 @@
 		int len, i;
 
 
-		len = 0;
-
-
-		while (src[len] != '\0')
-		{
-			len++;
-		}
-
+		len = _strlen(src);
 
 		for (i = 0; i < len; i++)
 		{
