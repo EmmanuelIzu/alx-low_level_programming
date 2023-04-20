@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	char *s = "", *str;
 	va_list args;
 
-	if (format)
+	if (format != NULL)
 	{
 		va_start(args, format);
 
@@ -36,6 +36,9 @@ void print_all(const char * const format, ...)
 
 			printf("%s%s", s, str);
 			break;
+		default:
+			continue;
+
 	}
 	++i;
 	s = ", ";
