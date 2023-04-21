@@ -27,9 +27,9 @@ int main(int argc, char *argv[])
 	}
 
 	arr = (char *)main;
-	
+
 	i = 0;
-	
+
 	while (i < bytes)
 	{
 		if (i == bytes - 1)
