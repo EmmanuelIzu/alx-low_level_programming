@@ -2,15 +2,15 @@
 #include <stdlib.h>
 
 /**
- * delete_nodeint_at_index - deletes a node in a linked list at a certain index
- * @head: pointer to the first element in the list
- * @index: index of the node to delete
+ * delete_nodeint_at_index - deletes a node 
+ * @head: head pointer
+ * @index: index of node
  *
- * Return: 1 (Success), or -1 (Fail)
+ * Return: 1 or -1
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *current = NULL;
+	listint_t *trans = NULL;
 	listint_t *hold = *head;
 	unsigned int i = 0;
 	int returnv = 1;
@@ -36,9 +36,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 
 
-	current = hold->next;
-	hold->next = current->next;
-	free(current);
+	trans = hold->next;
+	hold->next = trans->next;
+	free(trans);
 
 	return (returnv);
 }
