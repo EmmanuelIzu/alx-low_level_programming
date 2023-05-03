@@ -18,8 +18,10 @@ size_t free_listint_safe(listint_t **h)
 	if (*h == NULL)
 		return (0);
 
-	for (sub = 0; sub > 0 && *h; sub = (*h - (*h)->next))
+	while (*h != NULL)
 	{
+
+		sub = *h - (*h)->next;
 
 		if (sub > 0)
 		{
