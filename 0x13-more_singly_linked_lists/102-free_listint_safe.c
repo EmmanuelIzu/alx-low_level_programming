@@ -9,7 +9,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	size_t count = 0;
-	int sub = 0;
+	int sub;
 	listint_t *temp;
 
 	if (h == NULL)
@@ -18,9 +18,8 @@ size_t free_listint_safe(listint_t **h)
 	if (*h == NULL)
 		return (0);
 
-	while (*h != NULL)
+	for (sub = 0; sub > 0; sub = (*h - (*h)->next))
 	{
-		sub = *h - (*h)->next;
 
 		if (sub > 0)
 		{
