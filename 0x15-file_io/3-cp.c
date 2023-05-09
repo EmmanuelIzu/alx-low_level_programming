@@ -6,10 +6,28 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
+ * close_file - file descriptors is closed.
+ * @fd: closed file discriptor.
+ */
+void close_file(int fd)
+{
+        int cl;
+
+        cl = close(fd);
+
+        if (cl == -1)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+                exit(100);
+        }
+}
+
+/**
  * create_buffer - Allocates 1024 bytes to the file
  * @file: The file to be worked on
  * Return: returns a pointer
- */
+*/
+
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -25,23 +43,6 @@ char *create_buffer(char *file)
 	}
 
 	return (buffer);
-}
-
-/**
- * close_file - file descriptors is closed.
- * @fd: closed file discriptor.
- */
-void close_file(int fd)
-{
-	int cl;
-
-	cl = close(fd);
-
-	if (cl == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
 }
 
 /**
