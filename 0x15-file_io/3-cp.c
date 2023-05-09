@@ -53,7 +53,7 @@ char *create_buffer(char *file)
  */
 int main(int argc, char *argv[])
 {
-	int start, end, r, w;
+	int start, end, rd, wt;
 	char *buffer;
 
 	if (argc != 3)
@@ -64,11 +64,11 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	start = open(argv[1], O_RDONLY);
-	r = read(start, buffer, 1024);
+	rd = read(start, buffer, 1024);
 	end = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (start == -1 || r == -1)
+		if (start == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		w = write(end, buffer, r);
+		w = write(end, buffer, rd);
 		if (end == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -85,9 +85,9 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		r = read(start, buffer, 1024);
+		rd = read(start, buffer, 1024);
 		end = open(argv[2], O_WRONLY | O_APPEND);
-	} while (r > 0);
+	} while (rd > 0);
 
 	free(buffer);
 	close_file(start);
