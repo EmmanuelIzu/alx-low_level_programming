@@ -11,15 +11,15 @@ void close_file(int fd);
  */
 void close_file(int fd)
 {
-        int cl;
+	int cl;
 
-        cl = close(fd);
+	cl = close(fd);
 
-        if (cl == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-                exit(100);
-        }
+	if (cl == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 }
 
 /**
